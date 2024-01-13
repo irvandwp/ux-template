@@ -1,0 +1,25 @@
+<div class="grids-category">
+    <div class="category-container">
+        <div class="category">
+            <h2 class="c-navajo">{{gridCategory.categoryName}}</h2>
+            <span class="browse c-navajo" (click)="categoryOnClick()">{{gridCategory.seeAllText}}</span>
+        </div>
+    </div>
+    <div class="grids-container">
+        <div class="grid" *ngFor="let grid of gridData; let first=first"
+            [ngStyle]="{'background-image': 'url(' + grid.imageUrl + ')'}"
+        >
+            <div class="info-container">
+                <h3 class="title c-copper font-700" *ngIf="gridConfig.showTitle || first">{{grid.title}}</h3>
+                <div class="info" [ngStyle]="{'justify-content': gridConfig.showSubtitle ? 'space-between' : 'flex-start'}"> 
+                    <span class="author c-copper font-700" *ngIf="gridConfig.showSubtitle || first">{{grid.subtitle}}</span>
+                    <span class="view-count c-copper font-700" *ngIf="gridConfig.showViewsCount || first">{{grid.viewsCount}} Views</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="grid" (click)="uploadContent()">
+            <span class="c-navajo">{{uploadText}}</span>
+        </div>
+    </div>
+</div>

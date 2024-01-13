@@ -1,0 +1,12 @@
+<div class="category">
+    <h2 class="c-navajo">Channel</h2>
+    <span class="browse c-navajo">Browse All Channels</span>
+</div>
+<hr class="thick">
+<div class="channel-item">
+    <div class="container" *ngFor="let item of channelData">
+        <img class="thumbnail" [src]="item.thumbnailUrl">
+        <h3 class="title c-copper font-700" >{{item.channelName}}</h3>
+    </div>
+</div>
+<hr>

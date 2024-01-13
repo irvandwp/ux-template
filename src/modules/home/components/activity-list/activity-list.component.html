@@ -1,0 +1,22 @@
+<div class="category">
+    <h2 class="c-navajo">Activity</h2>
+    <span class="browse c-navajo">View Timeline / Filter Activities</span>
+</div>
+<hr class="thick">
+<div class="activity-item">
+    <div class="container" *ngFor="let item of activityData">
+        <img class="thumbnail" [src]="item.thumbnailUrl">
+        <div class="activity-info">
+            <div class="first-row">
+                <span class="author-name">{{item.subtitle}}</span>
+                <span class="activity-type">{{item.activityType}}</span>
+            </div>
+            <span class="description">{{item.description}}</span>
+            <div class="last-row">
+                <img class="icon" [src]="item.iconUrl">
+                <span class="timestamp">{{item.timestamp| timeAge}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

@@ -1,0 +1,42 @@
+@import 'colors.scss';
+@import 'responsive.scss';
+
+.navbar-container {
+    display: flex;
+    gap: 2%;
+
+    .nav-link {
+        display: flex;
+        text-decoration: none;
+        padding: 0 8px;
+
+        &:hover {
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        &.is-active {
+            background-color: $color-navajo;
+            border-radius: 8px;
+            span {
+                color: $color-copper !important;
+            }
+        }
+    }
+
+    .nav-title {
+        color: $color-navajo;
+    }
+
+    .separator {
+        font-weight: bold;
+        color: $color-navajo; 
+    }
+}
+
+@include for-mobile {
+    .navbar-container {
+        width: 100vw;
+        overflow-x: scroll;
+    }
+}

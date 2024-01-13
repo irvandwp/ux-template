@@ -1,0 +1,73 @@
+@import 'colors.scss';
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+hr.thick{
+    height: 3px;
+}
+
+.activity-item {
+    height: 445px;
+    overflow-y: scroll;
+
+    .container {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+
+    .thumbnail {
+        height: 65px;
+        width: 120px;
+        object-fit: cover;
+    }
+    
+    .activity-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .first-row {
+            display: flex;
+            gap: 8px;
+            align-items: baseline;
+
+            .author-name {
+                color: $color-navajo;
+                font-weight: 700;
+            }
+            
+            .activity-type {
+                color: $color-navajo;
+                font-size: 12px;
+            }
+        }
+
+        .description {
+            color: $color-navajo;
+            font-size: 12px;
+        }
+
+        .last-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .icon {
+                object-fit: contain;
+                width: 15px;
+                height: 15px;
+            }
+
+            .timestamp {
+                color: $color-navajo;
+                font-size: 12px;
+            }
+        }
+    }
+}

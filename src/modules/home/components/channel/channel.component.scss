@@ -1,0 +1,38 @@
+@import 'colors.scss';
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+hr.thick{
+    height: 3px;
+}
+
+.channel-item {
+    max-height: 750px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+
+    .container {
+        position: relative;
+
+        .title {
+            margin: 0;
+            position: absolute;
+            bottom: 12px;
+            left: 8px;
+        }
+    }
+
+    .thumbnail {
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+}

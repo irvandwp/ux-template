@@ -1,0 +1,47 @@
+@import 'assets/scss/colors.scss';
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: $color-copper;
+
+    a, a:visited, a:hover, a:active {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.font {
+    &-400 {
+        font-weight: 400;
+    }
+    &-700 {
+        font-weight: 700;
+    }
+}
+
+.c {
+    &-copper {
+        color: $color-copper;
+    }
+    &-apricot {
+        color: $color-apricot;
+    }
+    &-navajo {
+        color: $color-navajo;
+    }
+}
+
+input {
+    background-color: $color-navajo;
+}
+
+hr {
+    background-color: $color-navajo;
+    height: 1px;
+    border-color: transparent;
+}
+
+h2 {
+    margin: 0
+}

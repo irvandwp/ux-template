@@ -1,0 +1,45 @@
+<div class="home-container">
+    <section class="first-section">
+        <div class="videos-category left">
+            <app-grid-component 
+                [gridData]="videoData" 
+                [gridCategory]="videoCategory"
+                [gridConfig]="videoConfig"
+                [uploadText]="'Upload your own Videos'"
+                (categoryOnClickEmitter)="navigateTo('/videos')"
+            ></app-grid-component>
+        </div>
+        
+        <div class="activity-category right">
+            <app-activity-list></app-activity-list>
+        </div>
+    </section>
+
+    <section class="second-section">
+        <div class="left">
+            <div class="people-category">
+                <app-grid-component 
+                    [gridData]="peopleData" 
+                    [gridCategory]="peopleCategory"
+                    [gridConfig]="peopleConfig"
+                    [uploadText]="'Show your network'"
+                    (categoryOnClickEmitter)="navigateTo('')"
+                ></app-grid-component>
+            </div>
+
+            <div class="documents-category">
+                <app-grid-component 
+                    [gridData]="documentData" 
+                    [gridCategory]="documentCategory"
+                    [gridConfig]="documentConfig"
+                    [uploadText]="'Share Your Document'"
+                    (categoryOnClickEmitter)="navigateTo('')"
+                ></app-grid-component>
+            </div>
+        </div>
+        
+        <div class="channel-category right">
+            <app-channel></app-channel>
+        </div>
+    </section>
+</div>

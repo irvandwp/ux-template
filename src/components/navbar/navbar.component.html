@@ -1,0 +1,14 @@
+<hr>
+<div class="navbar-container">
+    <ng-container *ngFor="let item of navbarItem; let last = last">
+        <a class="nav-link" 
+            (click)="checkRouter(item.path)"
+            [routerLink]="item.path" 
+            [routerLinkActive]="'is-active'" 
+            #rla="routerLinkActive">
+            <span class="nav-title">{{ item.name }}</span>
+        </a>
+        <span *ngIf="!last" class="separator">/</span>
+    </ng-container>
+</div>
+<hr>

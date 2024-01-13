@@ -1,0 +1,8 @@
+$screen-xs      : 360px;
+$screen-sm      : 576px;
+
+@mixin for-mobile {
+    @media screen and (min-width: #{$screen-xs} ) and (max-width: #{$screen-sm - 1}) {
+        @content;
+    }
+}

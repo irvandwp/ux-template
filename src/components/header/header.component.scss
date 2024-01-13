@@ -1,0 +1,99 @@
+@import 'colors.scss';
+@import 'responsive.scss';
+
+header {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 200px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .search-input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        width: 70%;
+    }
+
+    .upload-button {
+        padding: 10px;
+        margin-left: 24px;
+        background-color: $color-navajo;
+        color: $color-copper;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+}
+
+.search-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    .image-container {
+        height: 40px;
+        width: 40px;
+        background-color: $color-navajo;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    
+    .profile-name {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: $color-navajo;
+
+        .firstname {
+            font-size: 18px;
+        }
+
+        .lastname {
+            font-size: 12px;
+        }
+    }
+}
+
+@include for-mobile {
+    .search-container {
+        display: none;
+    }
+}

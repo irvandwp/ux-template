@@ -1,0 +1,11 @@
+<div class="footer">
+    <hr>
+    <div class="social-network">
+        <div class="icon-container" *ngFor="let item of social"
+            (click)="socialOnClick(item.url)"
+        >
+            <img [src]="item.icon">
+        </div>
+    </div>
+    <span class="c-navajo">Ⓒ 2024 by me</span>
+</div>
